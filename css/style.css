@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    transition: .4s;
+}
+
+:root{
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    --Soft-violet: hsl(273, 75%, 66%);
+--Soft-blue: hsl(240, 73%, 65%);
+
+/* text */
+
+--Very-dark-grayish-blue: hsl(237, 12%, 33%);
+--Dark-grayish-blue: hsl(240, 6%, 50%);
+--Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(var(--Soft-violet),var(--Soft-blue)) ;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hideText{
+    display: none;
+    margin-top: 15px;
+}
+
+
+.fa-angle-up{
+    display: inline;
+}
+.Mainflex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     padding-bottom: 50px;
+     padding-top: 50px;
+     padding-right: 50px;
+     position: relative;
+   width:800px;
+   height: 400px;
+   background-image: url(../imgas/bg-pattern-desktop.svg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-color:var(--Light-grayish-blue);
+   border-radius: 15px;
+
+ 
+}
+.imgBox {
+     height: 100%;
+    width: 50%;
+    position: relative;
+    background-image: url(../imgas/illustration-woman-online-desktop.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 40px;
+}
+
+.Mainflex > img{
+    position: absolute;
+    top: 37%;
+    left: -10%;
+
+}
+
+.visibleText{
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+    width: 100%;
+}
+.visibleText p{
+    color: var(--Dark-grayish-blue);
+    cursor: pointer;
+}
+.visibleText p:hover{
+    color: var(--Soft-red);
+}
+
+.flex >i{
+    cursor: pointer;
+    margin-left:20px;
+    color: var(--Soft-red);
+}
+
+@media(max-width:767px){
+   .container{
+     min-height: 100vh;
+   }
+    .Mainflex{
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        padding: 25px 35px;
+        position: relative;
+        background-image: url(../imgas/bg-pattern-mobile.svg);
+        background-size: cover;
+    }
+    .Mainflex > img{
+        display: none;
+    }
+
+    .textBox{
+        margin-top: 200px;
+    }
+
+    .title{
+        text-align: center;
+    }
+
+    .imgBox{
+        position: absolute;
+        top: -53%;
+        overflow: visible;
+        background-image: url(../imgas/illustration-woman-online-mobile.svg);
+        height: 100%;
+        width: 350px;
+    }
+    
+}
+
+@media(max-width:600px){
+  .container{
+    min-height: 800px;
+  }
+  .Mainflex{
+    padding: 30px;
+  }
+   .imgBox{
+     top: -30%;
+     width: 100%;
+     left: 15px;
+     /*margin: 0 30px 30px;*/
+   }
+   .textBox{
+     height: 100%;
+     margin-top: 300px;
+   }
+}
